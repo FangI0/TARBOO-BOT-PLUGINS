@@ -6,17 +6,17 @@ let handler = async (m, {conn, usedPrefix}) => {
     if (!(who in global.db.data.users)) throw `✳️ المستخدم غير موجود في قاعدة بياناتي`
 
     var wealth = '*مفلس😭*'
-    if (`${user.bank}` <= 3000) {
+    if (`${user.exp}` <= 3000) {
         wealth = '*فقير 😞*'
-    } else if (`${user.bank}` <= 6000) {
+    } else if (`${user.exp}` <= 6000) {
         wealth = '*👔 موظف حكومي*'
-    } else if (`${user.bank}` <= 100000) {
+    } else if (`${user.exp}` <= 100000) {
         wealth = '*رجل اعمال 🤴🏼*'
-    } else if (`${user.bank}` <= 1000000) {
+    } else if (`${user.exp}` <= 1000000) {
         wealth = '*غني💸*'
-    } else if (`${user.bank}` <= 10000000) {
+    } else if (`${user.exp}` <= 10000000) {
         wealth = '*مليونير🤑💵*'
-    } else if (`${user.bank}` <= 1000000000) {
+    } else if (`${user.exp}` <= 1000000000) {
         wealth = '*ملياردير💰*'
     }
 
