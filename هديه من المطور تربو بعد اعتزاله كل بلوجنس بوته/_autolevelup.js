@@ -18,12 +18,11 @@ let before = user.level * 1
 while (canLevelUp(user.level, user.exp, global.multiplier)) user.level++
  if (before !== user.level) {
  
-conn.sendButton(m.chat, '𝐓𝐀𝐑𝐁𝐎𝐎☞𝐁𝐎𝐓' + wm, `*╭━⊰ ${username} ⊱━დ*
-> *┃ مستواك كان: ${before}*
-> *┃ مستواك دلوقتي: ${user.level}*
-> *┃ رتبتك: ${user.role}*
-> *┃ تاريخ التقدم: ${new Date().toLocaleString('id-ID')}*
-> *╰━⊰ واصل التقدم! ⊱━━დ*
+conn.sendButton(m.chat, '𝕆𝕄ℕ𝕀𝕊ℂ𝕀𝔼ℕ𝕋' + wm, `*╭━⊰ ${username} ⊱━*
+> *┃⛓️‍💥✰ مستواك السابق: ${before}*
+> *┃📊✰ المستوي الحالي: ${user.level}*
+> *┃🍷✰ رتبتك الحالية: ${user.role}*
+> *╰━⊰ _لقد وصلت الي مستوي جديد_ ⊱━*
 
 *_${lenguajeGB.smsAutoLv6()}_*`, null, [[lenguajeGB.smsConMenu(), `${usedPrefix}menu`]], null, null, fkontak)
 
