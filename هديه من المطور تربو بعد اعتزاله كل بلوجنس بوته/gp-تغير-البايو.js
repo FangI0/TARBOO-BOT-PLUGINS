@@ -6,7 +6,7 @@ let handler = async (m, { conn, args }) => {
     try {
         const newDesc = args.join(" ");
         await conn.groupUpdateDescription(m.chat, newDesc);
-        m.reply(`*✅ تم تحديث الوصف بنجاح! الوصف الجديد هو: "${newDesc}". شكرًا لتعاونك!*`);
+        m.reply(`*✅ تم تحديث الوصف بنجاح! الوصف الجديد هو: "${newDesc}".*`);
     } catch (e) {
         m.reply('*❌ عذرًا، حدثت مشكلة أثناء محاولة تغيير الوصف. يرجى المحاولة مرة أخرى لاحقًا.*');
     }
