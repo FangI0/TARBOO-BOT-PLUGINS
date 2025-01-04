@@ -1,20 +1,20 @@
 // مقدم من قناة كيلوا 
-// حقوق جو/انمي كيلوا
+// حقوق فانغ/سارقه
 //https://whatsapp.com/channel/0029Vab5oDNElagpHtJjmT0B
 
 const handler = async (m, {conn, text, usedPrefix, command}) => {
-  if (!text) return m.reply(`╯────────────────⟢
-  منشن
-الشخص الي عايز تخليه يكتب نص
-  وهمي
-  ╯────────────────⟢ـ
-  ${usedPrefix + command}* مرحبا @${m.sender.split`@`[0]} اهلين كيفك`, null, {mentions: [m.sender]});
+  if (!text) return m.reply(`*━━━━━━━━━━━━━━━━━╮*
+
+  *منشن الشخص الي عايز تخليه يكتب وهمي*
+  
+ *╰━━━━━━━━━━━━━━━━━* 
+  ${usedPrefix + command} اهلا @${m.sender.split`@`[0]} كيفك`, null, {mentions: [m.sender]});
   const cm = copy(m);
   let who;
   if (text.includes('@0')) who = '0@s.whatsapp.net';
   else if (m.isGroup) who = cm.participant = m.mentionedJid[0];
   else who = m.chat;
-  if (!who) return m.reply(`*منشن الشخص الي عايز تخليه يكتب نص╯────────────────⟢ـ وهمي*\n\n*${usedPrefix + command}* مرحبا @${m.sender.split`@`[0]} اهلين كيفك`, null, {mentions: [m.sender]});
+  if (!who) return m.reply(`*منشن الشخص الي عايزه يعمل منشن وهمي  وهمي*\n╰━━━━━━━━━━━━━━━━━╯*\n*${usedPrefix + command}* اهلا @${m.sender.split`@`[0]} كيفك`, null, {mentions: [m.sender]});
   cm.key.fromMe = false;
   cm.message[m.mtype] = copy(m.msg);
   const sp = '@' + who.split`@`[0];
@@ -33,4 +33,4 @@ export default handler;
 
 function copy(obj) {
   return JSON.parse(JSON.stringify(obj));
-}
+} 
