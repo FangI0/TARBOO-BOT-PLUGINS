@@ -3,7 +3,7 @@ import cheerio from 'cheerio'
 
   let handler = async (m, { conn, command, text, usedPrefix }) => {
   if (!text) throw `*يمكنك تحميل صور داك جودة عالية وممتازة من منصة pinterest عبر كتابة الامر متبوعا باسم الصورة التي تريد تحميلها مثال*\n\n*${usedPrefix + command} صورة الكون*`
-  conn.reply(m.chat, '*انتظر قليلا يا عزيزي ...*', m)
+  conn.reply(m.chat, '*🌸انتظر قليلا...*', m)
 
   try {
     const hasil = await pinterest(text);
@@ -15,8 +15,8 @@ import cheerio from 'cheerio'
       [gambarUrls[i], gambarUrls[j]] = [gambarUrls[j], gambarUrls[i]];
     }
 
-    // Mengirim 10 gambar secara acak
-    for (let i = 0; i < 10; i++) {
+    // Mengirim 1 gambar secara acak
+    for (let i = 0; i < 1; i++) {
       let imageUrl = gambarUrls[i];
       let imageRes = await fetch(imageUrl);
       let imageBuffer = await imageRes.buffer();
@@ -35,7 +35,7 @@ import cheerio from 'cheerio'
 
 handler.help = ['pinterest3']
 handler.tags = ['downloader']
-handler.command = /^صور$/i
+handler.command = /^صورة2$/i
 handler.diamond = true
 handler.limit = 3
 
