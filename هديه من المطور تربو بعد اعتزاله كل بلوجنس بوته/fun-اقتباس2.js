@@ -20,10 +20,10 @@ let yoMamaJokeHandler = async (m, { conn, text }) => {
     let translatedName = `${nameJson.name}`;
     
     let translation = await translate(yoMamaJoke, { to: 'ar' });
-    let translatedYoMamaJoke = `*❐⟣┈┈┈⟢╊⊰🐉⊱╉⟣┈┈┈⟢❐*
+    let translatedYoMamaJoke = `*❐⟣┈┈┈⟢╊⊰🌸⊱╉⟣┈┈┈⟢❐*
 *❐↞┇حـقيـقه📖 ↞ ${translation.text}.┇*
 *❐↞┇الـكـاتـب🖋 ↞ ${translatedName}.┇*
-*❐⟣┈┈┈⟢╊⊰🐉⊱╉⟣┈┈┈⟢❐*`;
+*❐⟣┈┈┈⟢╊⊰🌸⊱╉⟣┈┈┈⟢❐*`;
 
     m.reply(translatedYoMamaJoke);
   } catch (error) {
