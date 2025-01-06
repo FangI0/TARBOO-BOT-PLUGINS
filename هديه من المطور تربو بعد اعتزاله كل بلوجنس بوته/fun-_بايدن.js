@@ -1,9 +1,9 @@
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
-  let too = `[❗] افصل النص يحب بـ *+*\n\n *مـثــال* :\n*${usedPrefix + command}* تربو انت فين+انا هنا`
+  let too = `[❗] افصل النص يحب بـ *+*\n\n *مـثــال* :\n*${usedPrefix + command}* انت فين`
 
   if (!text) throw too
   let lr = (`https://api.popcat.xyz/biden?text=${encodeURIComponent(text)}`)
-  conn.sendFile(m.chat, lr, 'drake.png', `تم بواسطه 𝑻𝑨𝑹𝑩𝑶𝑶`, m)
+  conn.sendFile(m.chat, lr, 'drake.png', `تم بواسطه Ⱥ𝕌ℝO҉ɌȺ-乃oｲ🌸`, m)
 }
 handler.help = ['drake']
 handler.tags = ['maker']
